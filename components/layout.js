@@ -8,7 +8,6 @@ const name = 'Robert Engel'
 export const siteTitle = 'Next.js rae-dev example website'
 
 export default function Layout({ children, home }) {
-    // return <div className={ styles.container }>{ children }</div>
     return (
         <div className={ styles.container }>
             <Head>
