@@ -134,7 +134,7 @@
 ### Using ` getStaticPaths()`
 > Next.js allows you to statically generate pages with paths that depend on external data.
 >
-> Files named following this `[id].js` pattern use Dynamic Routes.   
+> Files named following this `[id].tsx` pattern use Dynamic Routes.   
 > Where `[id]` equals the name of the external resource.
 >
 > Pattern:
