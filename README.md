@@ -223,7 +223,7 @@
 >
 > As long as you use CSS Modules, you don’t have to worry about class name collisions.
 >
-> You can add global CSS files by importing them from `pages/_app.js`. You cannot import global CSS anywhere else.
+> You can add global CSS files by importing them from `pages/_app.tsx`. You cannot import global CSS anywhere else.
 
 ***
 
