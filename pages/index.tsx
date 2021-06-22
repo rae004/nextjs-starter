@@ -8,7 +8,7 @@ import Layout, { siteTitle } from '../components/layout'
 import Date from '../components/date'
 
 
-export const getStaticProps: GetStaticProps = async context => {
+export const getStaticProps: GetStaticProps = async () => {
     const allPostsData = getSortedPostsData()
     return {
         props: {

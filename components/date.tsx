@@ -1,3 +1,4 @@
+import React from "react";
 import { parseISO, format } from "date-fns";
 
 /**
@@ -7,7 +8,10 @@ import { parseISO, format } from "date-fns";
  * @returns {JSX.Element}
  * @constructor
  */
-export default function Date({ dateString, dateFormat }) {
+export default function Date({ dateString, dateFormat }: {
+    dateString: string
+    dateFormat: string
+}) {
     const date = parseISO(dateString)
     return <time dateTime={dateString}>{ format(date, dateFormat) }</time>
 }
