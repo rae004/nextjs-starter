@@ -5,7 +5,7 @@ class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head title={'Our Home Page'}>
-                    <link rel={'canonical'} href={'https://rae-dev.com'}/>
+                    <link rel={'canonical'} href={'https://nextjs-starter-ivory-ten.vercel.app/'}/>
                 </Head>
                 <body>
                     <Main />
