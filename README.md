@@ -134,7 +134,7 @@
 ### Using ` getStaticPaths()`
 > Next.js allows you to statically generate pages with paths that depend on external data.
 >
-> Files named following this `[id].js` pattern use Dynamic Routes.   
+> Files named following this `[id].tsx` pattern use Dynamic Routes.   
 > Where `[id]` equals the name of the external resource.
 >
 > Pattern:
@@ -223,7 +223,7 @@
 >
 > As long as you use CSS Modules, you don’t have to worry about class name collisions.
 >
-> You can add global CSS files by importing them from `pages/_app.js`. You cannot import global CSS anywhere else.
+> You can add global CSS files by importing them from `pages/_app.tsx`. You cannot import global CSS anywhere else.
 
 ***
 

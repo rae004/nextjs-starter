@@ -19,37 +19,22 @@ export function getSortedPostsData() {
 
         return {
             id,
-            ...matterResult.data
+            ...(matterResult.data as { title: string; date: string })
         }
     })
 
-    return allPostsData.sort(({ date: a }, { date: b }) => {
-        if (a < b) {
+    return allPostsData.sort((a, b) => {
+        if (a.date < b.date) {
             return 1
-        }
-        if (a > b) {
+        } else {
             return -1
         }
-        return 0
-    })
+    } )
 }
 
 export function getAllPostIds() {
     const fileNames = fs.readdirSync(postsDirectory)
 
-    // Returns an array that looks like this:
-    // [
-    //   {
-    //     params: {
-    //       id: 'ssg-ssr'
-    //     }
-    //   },
-    //   {
-    //     params: {
-    //       id: 'pre-rendering'
-    //     }
-    //   }
-    // ]
     return fileNames.map(fileName => {
         return {
             params: {
@@ -59,7 +44,7 @@ export function getAllPostIds() {
     })
 }
 
-export async function getPostData(id) {
+export async function getPostData(id: string): Promise<object> {
     const fullPath = path.join(postsDirectory, `${id}.md`)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
 
@@ -76,7 +61,7 @@ export async function getPostData(id) {
     return {
         id,
         contentHtml,
-        ...matterResult.data,
+        ...(matterResult.data as { date: string; title: string}),
     }
 }
 
