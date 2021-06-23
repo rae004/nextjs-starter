@@ -24,7 +24,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export default function Post({ postData }: {
-    postDate: {
+    postData: {
         title: string
         date: string
         contentHtml: string
